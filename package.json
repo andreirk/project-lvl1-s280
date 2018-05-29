@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bgames": "node src/bin/brain-games.js",
     "babel-node": "babel-node",
-    "build": "babel src --out-dir dist --source-maps inline", 
+    "build": "set NODE_ENV=production && babel src --out-dir dist --source-maps inline", 
     "prepublishOnly": "npm run build"
 
   },
