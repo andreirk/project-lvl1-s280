@@ -6,6 +6,6 @@ publish:
 	npm publish --access=public
 
 lint:
-	npm run eslint
+	npm run eslint src
 
 test: lint
