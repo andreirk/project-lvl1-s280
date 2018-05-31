@@ -2,11 +2,7 @@
 
 import greet from '..';
 
-const welcome = () => {
-  console.log('Welcome to the Brain Games!');
-}
+console.log('Welcome to the Brain Games!');
 
-export default welcome;
-
-//greet();
+greet();
 
