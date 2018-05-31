@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "brain-games": "node dist/bin/brain-games.js",
     "brain-even": "node dist/bin/brain-even.js",
+    "brain-calc": "node dist/bin/brain-calc.js",
     "babel-node": "babel-node",
     "build": "set NODE_ENV=production && babel src --out-dir dist --source-maps inline ",
     "prepublishOnly": "npm run build",
@@ -20,7 +21,8 @@
   "license": "ISC",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
