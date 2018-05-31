@@ -3,4 +3,3 @@
 import greet from '..';
 
 greet();
-

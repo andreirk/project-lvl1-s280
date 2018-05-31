@@ -6,5 +6,4 @@ const greet = () => {
   return userName;
 };
 
-
 export default greet;
