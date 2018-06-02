@@ -9,3 +9,6 @@ lint:
 	npm run eslint src
 
 test: lint
+
+build:
+	npm run build
