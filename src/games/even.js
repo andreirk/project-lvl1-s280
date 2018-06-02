@@ -7,9 +7,9 @@ const game = (numberOfTries) => {
   console.log('Answer "yes" if number even otherwise answer "no". \n\n');
   const userName = getNameFromUser();
   for (let i = 0; i < numberOfTries; i += 1) {
-    const num = Math.ceil(Math.random() * 20);
-    const answer = readlineSync.question(`Question: ${num} \n`);
-    const correctAnswer = isEven(num) ? 'yes' : 'no';
+    const question = Math.ceil(Math.random() * 20);
+    const answer = readlineSync.question(`Question: ${question} \n`);
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
     console.log(`You answer: ${answer}`);
     if (answer === correctAnswer) {
       console.log('Correct!');

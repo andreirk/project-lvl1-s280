@@ -26,8 +26,8 @@ const game = (numberOfRounds) => {
     const num2 = Math.ceil(Math.random() * 100);
     const randomIndexOfSignsArray = randomIndexOfArray(SIGNS);
     const sign = SIGNS[randomIndexOfSignsArray];
-    const userAnswer = parseInt(readlineSync.question(`Question: ${num1} ${sign} ${num2} \n`), 10);
-    const correctAnswer = calculate(num1, num2, sign);
+    const userAnswer = readlineSync.question(`Question: ${num1} ${sign} ${num2} \n`);
+    const correctAnswer = `${calculate(num1, num2, sign)}`;
     console.log(`You answer: ${userAnswer}`);
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
