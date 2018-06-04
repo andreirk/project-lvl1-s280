@@ -1,15 +1,24 @@
+import readlineSync from 'readline-sync';
 import askName from './index';
 
 const numberOfStepsInTheGame = 3;
 
 export default (game) => {
   console.log('Welcome to the Brain Games!');
-  game.askQuestion();
+  const mainGameQuestion = game.getMainQuestionText();
+  console.log(mainGameQuestion);
   const userName = askName();
-  const isWin = game.run(numberOfStepsInTheGame);
-  if (isWin) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
+  for (let i = 0; i < numberOfStepsInTheGame; i += 1) {
+    const { questionText, correctAnswer } = game.getNextQuestionInfo();
+    const userAnswer = readlineSync.question(questionText);
+    console.log(`You answer: ${userAnswer}`);
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
